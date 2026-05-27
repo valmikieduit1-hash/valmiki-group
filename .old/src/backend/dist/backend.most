@@ -1,0 +1,643 @@
+// Version: 1.0.0
+type AboutPageContent__4319087 =
+  {
+    achievements : [Achievement__152381301];
+    companyStory : Text;
+    imageUrl : Text;
+    mission : Text;
+    timeline : [TimelineEntry__795292101];
+    vision : Text
+  };
+type Achievement__152381301 =
+  {description : Text; icon : Text; id : RecordId__634517021; metric : Text};
+type BatchTiming__328630257 =
+  {
+    capacity : Nat;
+    endDate : Text;
+    enrolled : Nat;
+    id : RecordId__634517021;
+    schedule : Text;
+    startDate : Text
+  };
+type BeOurPartnerContent__996554592 =
+  {
+    formDescription : Text;
+    generalBenefits : [Text];
+    heroHeadline : Text;
+    heroImage : Text;
+    heroSubheadline : Text;
+    partnershipTypes : [PartnershipTypeItem__614697143]
+  };
+type BeOurPartnerInquiry__826218198 =
+  {
+    companyName : Text;
+    contactName : Text;
+    email : Text;
+    id : Nat;
+    message : Text;
+    partnershipType : Text;
+    phone : Text;
+    submittedAt : Int
+  };
+type BlogPost__742465984 =
+  {
+    category : Text;
+    content : Text;
+    createdAt : Timestamp__301639476;
+    featuredImageUrl : Text;
+    id : RecordId__634517021;
+    isPublished : Bool;
+    publishedAt : Nat;
+    slug : Text;
+    tags : [Text];
+    title : Text;
+    updatedAt : Timestamp__301639476
+  };
+type ContactInfo__807986783 =
+  {
+    address1 : Text;
+    address2 : Text;
+    address3 : Text;
+    branch1Name : Text;
+    branch2Name : Text;
+    branch3Name : Text;
+    email : Text;
+    phone1 : Text;
+    phone2 : Text;
+    phone3 : Text
+  };
+type ContactSubmission__167314994 =
+  {
+    email : Text;
+    id : RecordId__634517021;
+    inquiryType : Text;
+    message : Text;
+    name : Text;
+    phone : Text;
+    timestamp : Timestamp__301639476
+  };
+type CostBreakdown__254787941 =
+  {
+    accommodation : Text;
+    food : Text;
+    miscellaneous : Text;
+    totalMonthly : Text;
+    transport : Text
+  };
+type CounselingBooking__354084923 =
+  {
+    countryInterests : [Text];
+    educationLevel : Text;
+    email : Text;
+    id : RecordId__634517021;
+    name : Text;
+    phone : Text;
+    preferredTime : Text;
+    timestamp : Timestamp__301639476
+  };
+type CountryDetailContent__584188650 =
+  {
+    costOfLiving : CostBreakdown__254787941;
+    countrySlug : Text;
+    faqs : [FAQ__741415365];
+    heroImageUrl : Text;
+    heroSubtitle : Text;
+    heroTitle : Text;
+    popularCourses : [Text];
+    prOpportunities : Text;
+    scholarships : [Text];
+    universities : [CountryUniversity__714458047];
+    visaProcess : [VisaStep__85109833];
+    whyStudyHere : Text;
+    workRights : Text
+  };
+type CountryFAQ__621942963 = {answer : Text; question : Text};
+type CountryInfo__346673569 =
+  {
+    acceptanceRate : Text;
+    averageCost : Text;
+    description : Text;
+    faqs : [CountryFAQ__621942963];
+    flagImage : Text;
+    heroImage : Text;
+    intakeMonths : Text;
+    order : Nat;
+    popularCourses : [Text];
+    prPathway : Text;
+    processingTime : Text;
+    requirements : [Text];
+    scholarships : [Text];
+    slug : Text;
+    topUniversities : [CountryTopUniversity__748637301];
+    tuition : Text;
+    visaSteps : [Text];
+    visaSuccessRate : Text;
+    workOpportunities : Text
+  };
+type CountryTopUniversity__748637301 = {name : Text; ranking : Text};
+type CountryUniversity__714458047 =
+  {
+    id : RecordId__634517021;
+    logoUrl : Text;
+    name : Text;
+    ranking : Text;
+    tuition : Text;
+    website : Text
+  };
+type Data__791452850<K, V> =
+  {var count : Nat__490723111; kvs : [var ?(K, V)]};
+type DemoClassBooking__698108679 =
+  {
+    email : Text;
+    id : RecordId__634517021;
+    name : Text;
+    phone : Text;
+    preferredTime : Text;
+    testType : Text;
+    timestamp : Timestamp__301639476
+  };
+type EduLoanPartner__535993374 =
+  {id : Text; logoUrl : Text; name : Text; websiteUrl : Text};
+type EventItem__445788099 =
+  {
+    date : Text;
+    description : Text;
+    id : RecordId__634517021;
+    imageUrl : Text;
+    isActive : Bool;
+    location : Text;
+    registrationLink : Text;
+    title : Text
+  };
+type FAQ__741415365 =
+  {answer : Text; id : RecordId__634517021; order : Nat; question : Text};
+type FacebookReviewsBadge__401685073 =
+  {isVisible : Bool; rating : Text; reviewCount : Text; reviewUrl : Text};
+type FooterContent__163976512 =
+  {
+    copyrightText : Text;
+    countryLinks : [FooterLink__295163061];
+    eduLoanPartners : [EduLoanPartner__535993374];
+    facebookReviewsBadge : FacebookReviewsBadge__401685073;
+    googleReviewsBadge : GoogleReviewsBadge__75920712;
+    officeLocations : [OfficeLocation__156765773];
+    quickLinks : [FooterLink__295163061];
+    serviceLinks : [FooterLink__295163061];
+    socialLinks : [FooterSocialLink__820482709];
+    whatsappNumber : Text
+  };
+type FooterLink__295163061 = {linkLabel : Text; url : Text};
+type FooterSocialLink__820482709 = {platform : Text; url : Text};
+type FreeCounselingBenefitPoint__857650332 =
+  {description : Text; title : Text};
+type FreeCounselingContent__35999782 =
+  {
+    benefitPoints : [FreeCounselingBenefitPoint__857650332];
+    ctaText : Text;
+    formDescription : Text;
+    heroHeadline : Text;
+    heroImageUrl : Text;
+    heroSubheadline : Text
+  };
+type GalleryEntry__970201442 =
+  {
+    createdAt : Int;
+    destinationCountry : Text;
+    id : Nat;
+    imageUrl : Text;
+    isVisible : Bool;
+    order : Nat;
+    studentName : Text;
+    universityAdmitted : Text;
+    visaStatus : Text
+  };
+type GoogleReviewsBadge__75920712 =
+  {isVisible : Bool; rating : Text; reviewCount : Text; reviewUrl : Text};
+type HeroContent__608103728 =
+  {
+    headline : Text;
+    studentsGuided : Text;
+    subheadline : Text;
+    universityPartnerships : Text;
+    visaSuccessRate : Text;
+    yearsExperience : Text
+  };
+type HomeSectionPoint__248245496 =
+  {description : Text; icon : Text; title : Text};
+type HomeSectionsContent__535015871 =
+  {
+    ctaBannerButtonText : Text;
+    ctaBannerHeadline : Text;
+    ctaBannerSubheadline : Text;
+    eventsDisplayCount : Nat;
+    footerDescription : Text;
+    footerSocialLinks : [HomeSocialLink__71186116];
+    testimonialsDisplayCount : Nat;
+    universityMarqueeEnabled : Bool;
+    whyChooseUsHeadline : Text;
+    whyChooseUsPoints : [HomeSectionPoint__248245496]
+  };
+type HomeSocialLink__71186116 = {platform : Text; url : Text};
+type ImmigrationConsultation__990827664 =
+  {
+    country : Text;
+    email : Text;
+    id : RecordId__634517021;
+    name : Text;
+    phone : Text;
+    preferredTime : Text;
+    timestamp : Timestamp__301639476;
+    visaType : Text
+  };
+type ImmigrationVisa__691653388 =
+  {
+    description : Text;
+    documentsRequired : [Text];
+    eligibilityCriteria : [Text];
+    id : Text;
+    imageUrl : Text;
+    processingTime : Text;
+    requirements : [Text];
+    successRate : Text;
+    title : Text;
+    visaType : Text
+  };
+type Internal__8484328<K, V> =
+  {children : [var ?Node__46230540<K, V>]; data : Data__791452850<K, V>};
+type JobApplication__670795074 =
+  {
+    applicantName : Text;
+    coverLetter : Text;
+    email : Text;
+    id : Nat;
+    jobOpeningId : Nat;
+    phone : Text;
+    positionApplied : Text;
+    resumeUrl : Text;
+    submittedAt : Int
+  };
+type JobOpening__805627757 =
+  {
+    createdAt : Int;
+    department : Text;
+    description : Text;
+    id : Nat;
+    isActive : Bool;
+    location : Text;
+    requirements : Text;
+    title : Text
+  };
+type LeadershipMember__1036211326 =
+  {
+    bio : Text;
+    id : RecordId__634517021;
+    imageUrl : Text;
+    name : Text;
+    order : Nat;
+    role : Text
+  };
+type Leaf__809889148<K, V> = {data : Data__791452850<K, V>};
+type LifeAtValmikiContent__510845068 =
+  {
+    cultureDescription : Text;
+    galleryImages : [LifeAtValmikiGalleryImage__65302808];
+    heroHeadline : Text;
+    heroImageUrl : Text;
+    heroSubheadline : Text;
+    missionText : Text;
+    perks : [LifeAtValmikiPerk__736616263]
+  };
+type LifeAtValmikiGalleryImage__65302808 = {caption : Text; imageUrl : Text};
+type LifeAtValmikiPerk__736616263 =
+  {description : Text; icon : Text; title : Text};
+type Map__158565046<K, V> = Map__297112838<K, V>;
+type Map__297112838<K, V> =
+  {var root : Node__46230540<K, V>; var size : Nat__490723111};
+type Map__605269027<K, V> = Map__158565046<K, V>;
+type Nat__490723111 = Nat__920180692;
+type Nat__920180692 = Nat;
+type NewsletterSubscription__565461734 =
+  {email : Text; id : RecordId__634517021; timestamp : Timestamp__301639476};
+type Node__46230540<K, V> =
+  {#internal : Internal__8484328<K, V>; #leaf : Leaf__809889148<K, V>};
+type OfficeLocation__156765773 =
+  {address : Text; city : Text; email : Text; id : Text; phone : Text};
+type PageContent__874761684 =
+  {
+    bodyContent : Text;
+    heroHeadline : Text;
+    heroImageUrl : Text;
+    heroSubheadline : Text;
+    isActive : Bool;
+    metaDescription : Text;
+    pageId : Text;
+    sections : [PageSection__347569683];
+    title : Text
+  };
+type PageHeroContent__81613072 =
+  {headline : Text; imageUrl : Text; pageId : Text; subheadline : Text};
+type PageSection__347569683 =
+  {
+    content : Text;
+    id : Text;
+    imageUrl : Text;
+    items : [Text];
+    order : Nat;
+    sectionType : Text;
+    title : Text
+  };
+type PartnerUniversity__979464530 =
+  {
+    country : Text;
+    id : RecordId__634517021;
+    logoUrl : Text;
+    name : Text;
+    order : Nat;
+    website : Text
+  };
+type PartnershipTypeItem__614697143 =
+  {benefits : [Text]; description : Text; icon : Text; title : Text};
+type ProcessStep__348531342 =
+  {
+    description : Text;
+    icon : Text;
+    id : RecordId__634517021;
+    order : Nat;
+    title : Text
+  };
+type RecordId__634517021 = Nat;
+type ScholarshipInfo__112593241 =
+  {
+    amount : Text;
+    deadline : Text;
+    eligibility : Text;
+    id : RecordId__634517021;
+    name : Text
+  };
+type ServiceDetailContent__404876746 =
+  {
+    ctaButtonText : Text;
+    ctaText : Text;
+    eligibilityCriteria : [Text];
+    faqs : [ServiceFAQ__575442417];
+    heroHeadline : Text;
+    heroImage : Text;
+    heroSubheadline : Text;
+    overview : Text;
+    processSteps : [ServiceProcessStep__748837538];
+    serviceId : Text;
+    whatIsIncluded : [Text];
+    whyChooseValmiki : [Text]
+  };
+type ServiceFAQ__575442417 = {answer : Text; question : Text};
+type ServiceItem__69739701 =
+  {
+    ctaLink : Text;
+    description : Text;
+    features : [Text];
+    icon : Text;
+    id : RecordId__634517021;
+    name : Text;
+    order : Nat
+  };
+type ServiceProcessStep__748837538 =
+  {description : Text; icon : Text; order : Nat; title : Text};
+type SessionToken__269433602 = Text;
+type StudyAbroadContent__552770028 =
+  {
+    headline : Text;
+    imageUrl : Text;
+    intakeInfo : Text;
+    introduction : Text;
+    processSteps : [ProcessStep__348531342];
+    scholarships : [ScholarshipInfo__112593241]
+  };
+type TeamMember__818543421 =
+  {
+    bio : Text;
+    id : RecordId__634517021;
+    imageUrl : Text;
+    name : Text;
+    order : Nat;
+    role : Text
+  };
+type TestPrepExam__1029522882 =
+  {
+    batchTimings : [BatchTiming__328630257];
+    cost : Text;
+    description : Text;
+    duration : Text;
+    id : Text;
+    imageUrl : Text;
+    name : Text;
+    scoreRange : Text;
+    successRate : Text
+  };
+type TestimonialItem__372702112 =
+  {
+    country : Text;
+    course : Text;
+    id : RecordId__634517021;
+    imageUrl : Text;
+    isVisible : Bool;
+    name : Text;
+    rating : Nat;
+    text : Text;
+    university : Text;
+    youtubeUrl : ?Text
+  };
+type TimelineEntry__795292101 =
+  {
+    description : Text;
+    id : RecordId__634517021;
+    milestone : Text;
+    year : Text
+  };
+type Timestamp__301639476 = Int;
+type VisaEligibilityResult__30524927 =
+  {
+    age : Nat;
+    country : Text;
+    education : Text;
+    id : RecordId__634517021;
+    resultPercentage : Nat;
+    testScores : Text;
+    timestamp : Timestamp__301639476;
+    visaType : Text;
+    workExperienceYears : Nat
+  };
+type VisaStep__85109833 =
+  {description : Text; id : RecordId__634517021; order : Nat; title : Text};
+type WebsiteTheme__685855447 =
+  {
+    accentColor : Text;
+    backgroundColor : Text;
+    bodyTextColor : Text;
+    buttonColor : Text;
+    buttonTextColor : Text;
+    footerBgColor : Text;
+    footerTextColor : Text;
+    headingTextColor : Text;
+    primaryColor : Text;
+    secondaryColor : Text
+  };
+actor {
+  stable var adminCountries :
+    {
+      var root : Node__46230540<Text, CountryInfo__346673569>;
+      var size : Nat__490723111
+    };
+  stable var adminEvents :
+    {
+      var blockIndex : Nat__490723111;
+      var blocks : [var [var ?EventItem__445788099]];
+      var elementIndex : Nat__490723111
+    };
+  stable var adminServices :
+    {
+      var blockIndex : Nat__490723111;
+      var blocks : [var [var ?ServiceItem__69739701]];
+      var elementIndex : Nat__490723111
+    };
+  stable var adminSessions :
+    {
+      var root : Node__46230540<SessionToken__269433602, Int>;
+      var size : Nat__490723111
+    };
+  stable var adminState :
+    {
+      var contactInfo : ContactInfo__807986783;
+      var heroContent : HeroContent__608103728;
+      var nextAdminId : Nat;
+      var passwordHash : Text
+    };
+  stable var adminTeam :
+    {
+      var blockIndex : Nat__490723111;
+      var blocks : [var [var ?TeamMember__818543421]];
+      var elementIndex : Nat__490723111
+    };
+  stable var adminTestimonials :
+    {
+      var blockIndex : Nat__490723111;
+      var blocks : [var [var ?TestimonialItem__372702112]];
+      var elementIndex : Nat__490723111
+    };
+  stable var beOurPartnerState :
+    {var content : ?BeOurPartnerContent__996554592};
+  stable var blogPosts :
+    {
+      var blockIndex : Nat__490723111;
+      var blocks : [var [var ?BlogPost__742465984]];
+      var elementIndex : Nat__490723111
+    };
+  stable var contactSubmissions :
+    {
+      var blockIndex : Nat__490723111;
+      var blocks : [var [var ?ContactSubmission__167314994]];
+      var elementIndex : Nat__490723111
+    };
+  stable var contentState :
+    {
+      var aboutPageContent : AboutPageContent__4319087;
+      var nextContentId : Nat;
+      var studyAbroadContent : StudyAbroadContent__552770028
+    };
+  stable var counselingBookings :
+    {
+      var blockIndex : Nat__490723111;
+      var blocks : [var [var ?CounselingBooking__354084923]];
+      var elementIndex : Nat__490723111
+    };
+  stable var countryDetails :
+    {
+      var root : Node__46230540<Text, CountryDetailContent__584188650>;
+      var size : Nat__490723111
+    };
+  stable var demoClassBookings :
+    {
+      var blockIndex : Nat__490723111;
+      var blocks : [var [var ?DemoClassBooking__698108679]];
+      var elementIndex : Nat__490723111
+    };
+  stable var footerContentState : {var content : FooterContent__163976512};
+  stable var formState : {var nextId : Nat};
+  stable var freeCounselingState :
+    {var content : FreeCounselingContent__35999782};
+  stable var galleryEntries :
+    {
+      var blockIndex : Nat__490723111;
+      var blocks : [var [var ?GalleryEntry__970201442]];
+      var elementIndex : Nat__490723111
+    };
+  stable var homeSectionsState :
+    {var content : HomeSectionsContent__535015871};
+  stable var immigrationConsultations :
+    {
+      var blockIndex : Nat__490723111;
+      var blocks : [var [var ?ImmigrationConsultation__990827664]];
+      var elementIndex : Nat__490723111
+    };
+  stable var immigrationVisas :
+    {
+      var root : Node__46230540<Text, ImmigrationVisa__691653388>;
+      var size : Nat__490723111
+    };
+  stable var jobApplications :
+    {
+      var blockIndex : Nat__490723111;
+      var blocks : [var [var ?JobApplication__670795074]];
+      var elementIndex : Nat__490723111
+    };
+  stable var jobOpenings :
+    {
+      var blockIndex : Nat__490723111;
+      var blocks : [var [var ?JobOpening__805627757]];
+      var elementIndex : Nat__490723111
+    };
+  stable var leadershipState : {var members : [LeadershipMember__1036211326]};
+  stable var lifeAtValmikiState :
+    {var content : LifeAtValmikiContent__510845068};
+  stable var newsletterSubscriptions :
+    {
+      var blockIndex : Nat__490723111;
+      var blocks : [var [var ?NewsletterSubscription__565461734]];
+      var elementIndex : Nat__490723111
+    };
+  stable var pageContents :
+    {
+      var root : Node__46230540<Text, PageContent__874761684>;
+      var size : Nat__490723111
+    };
+  stable var pageHeroesState :
+    {var heroes : Map__605269027<Text, PageHeroContent__81613072>};
+  stable var partnerInquiries :
+    {
+      var blockIndex : Nat__490723111;
+      var blocks : [var [var ?BeOurPartnerInquiry__826218198]];
+      var elementIndex : Nat__490723111
+    };
+  stable var partnerUniversities :
+    {
+      var blockIndex : Nat__490723111;
+      var blocks : [var [var ?PartnerUniversity__979464530]];
+      var elementIndex : Nat__490723111
+    };
+  stable var serviceDetails :
+    {
+      var root : Node__46230540<Text, ServiceDetailContent__404876746>;
+      var size : Nat__490723111
+    };
+  stable var testPrepExams :
+    {
+      var root : Node__46230540<Text, TestPrepExam__1029522882>;
+      var size : Nat__490723111
+    };
+  stable var visaEligibilityResults :
+    {
+      var blockIndex : Nat__490723111;
+      var blocks : [var [var ?VisaEligibilityResult__30524927]];
+      var elementIndex : Nat__490723111
+    };
+  stable var websiteThemeState : {var theme : WebsiteTheme__685855447}
+};

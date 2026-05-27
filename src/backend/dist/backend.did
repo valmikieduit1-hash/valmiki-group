@@ -1,0 +1,1000 @@
+type WebsiteTheme = 
+ record {
+   accentColor: text;
+   backgroundColor: text;
+   bodyTextColor: text;
+   buttonColor: text;
+   buttonTextColor: text;
+   footerBgColor: text;
+   footerTextColor: text;
+   headingTextColor: text;
+   primaryColor: text;
+   secondaryColor: text;
+ };
+type VisaStep = 
+ record {
+   description: text;
+   id: RecordId;
+   order: nat;
+   title: text;
+ };
+type VisaEligibilityResult = 
+ record {
+   age: nat;
+   country: text;
+   education: text;
+   id: RecordId;
+   resultPercentage: nat;
+   testScores: text;
+   timestamp: Timestamp;
+   visaType: text;
+   workExperienceYears: nat;
+ };
+type Timestamp = int;
+type TimelineEntry = 
+ record {
+   description: text;
+   id: RecordId;
+   milestone: text;
+   year: text;
+ };
+type TestimonialItem = 
+ record {
+   country: text;
+   course: text;
+   id: RecordId;
+   imageUrl: text;
+   isVisible: bool;
+   name: text;
+   rating: nat;
+   "text": text;
+   university: text;
+   youtubeUrl: opt text;
+ };
+type TestimonialInput = 
+ record {
+   country: text;
+   course: text;
+   imageUrl: text;
+   isVisible: bool;
+   name: text;
+   rating: nat;
+   "text": text;
+   university: text;
+   youtubeUrl: opt text;
+ };
+type TestPrepExam = 
+ record {
+   batchTimings: vec BatchTiming;
+   cost: text;
+   description: text;
+   duration: text;
+   id: text;
+   imageUrl: text;
+   name: text;
+   scoreRange: text;
+   successRate: text;
+ };
+type TeamMemberInput = 
+ record {
+   bio: text;
+   imageUrl: text;
+   name: text;
+   order: nat;
+   role: text;
+ };
+type TeamMember = 
+ record {
+   bio: text;
+   id: RecordId;
+   imageUrl: text;
+   name: text;
+   order: nat;
+   role: text;
+ };
+type SubmissionResult = 
+ record {
+   id: RecordId;
+   timestamp: Timestamp;
+ };
+type StudyAbroadContent = 
+ record {
+   headline: text;
+   imageUrl: text;
+   intakeInfo: text;
+   introduction: text;
+   processSteps: vec ProcessStep;
+   scholarships: vec ScholarshipInfo;
+ };
+type SessionToken = text;
+type ServiceProcessStep = 
+ record {
+   description: text;
+   icon: text;
+   order: nat;
+   title: text;
+ };
+type ServiceItemInput = 
+ record {
+   ctaLink: text;
+   description: text;
+   features: vec text;
+   icon: text;
+   name: text;
+   order: nat;
+ };
+type ServiceItem = 
+ record {
+   ctaLink: text;
+   description: text;
+   features: vec text;
+   icon: text;
+   id: RecordId;
+   name: text;
+   order: nat;
+ };
+type ServiceFAQ = 
+ record {
+   answer: text;
+   question: text;
+ };
+type ServiceDetailContent = 
+ record {
+   ctaButtonText: text;
+   ctaText: text;
+   eligibilityCriteria: vec text;
+   faqs: vec ServiceFAQ;
+   heroHeadline: text;
+   heroImage: text;
+   heroSubheadline: text;
+   overview: text;
+   processSteps: vec ServiceProcessStep;
+   serviceId: text;
+   whatIsIncluded: vec text;
+   whyChooseValmiki: vec text;
+ };
+type ScholarshipInfo = 
+ record {
+   amount: text;
+   deadline: text;
+   eligibility: text;
+   id: RecordId;
+   name: text;
+ };
+type RecordId = nat;
+type ProcessStep = 
+ record {
+   description: text;
+   icon: text;
+   id: RecordId;
+   order: nat;
+   title: text;
+ };
+type PartnershipTypeItem = 
+ record {
+   benefits: vec text;
+   description: text;
+   icon: text;
+   title: text;
+ };
+type PartnerUniversity = 
+ record {
+   country: text;
+   id: RecordId;
+   logoUrl: text;
+   name: text;
+   order: nat;
+   website: text;
+ };
+type PageSection = 
+ record {
+   content: text;
+   id: text;
+   imageUrl: text;
+   items: vec text;
+   order: nat;
+   sectionType: text;
+   title: text;
+ };
+type PageHeroContent = 
+ record {
+   headline: text;
+   imageUrl: text;
+   pageId: text;
+   subheadline: text;
+ };
+type PageContent = 
+ record {
+   bodyContent: text;
+   heroHeadline: text;
+   heroImageUrl: text;
+   heroSubheadline: text;
+   isActive: bool;
+   metaDescription: text;
+   pageId: text;
+   sections: vec PageSection;
+   title: text;
+ };
+type OfficeLocation = 
+ record {
+   address: text;
+   city: text;
+   email: text;
+   id: text;
+   phone: text;
+ };
+type NewsletterSubscription = 
+ record {
+   email: text;
+   id: RecordId;
+   timestamp: Timestamp;
+ };
+type LifeAtValmikiPerk = 
+ record {
+   description: text;
+   icon: text;
+   title: text;
+ };
+type LifeAtValmikiGalleryImage = 
+ record {
+   caption: text;
+   imageUrl: text;
+ };
+type LifeAtValmikiContent = 
+ record {
+   cultureDescription: text;
+   galleryImages: vec LifeAtValmikiGalleryImage;
+   heroHeadline: text;
+   heroImageUrl: text;
+   heroSubheadline: text;
+   missionText: text;
+   perks: vec LifeAtValmikiPerk;
+ };
+type LeadershipMember = 
+ record {
+   bio: text;
+   id: RecordId;
+   imageUrl: text;
+   name: text;
+   order: nat;
+   role: text;
+ };
+type JobOpeningInput = 
+ record {
+   department: text;
+   description: text;
+   isActive: bool;
+   location: text;
+   requirements: text;
+   title: text;
+ };
+type JobOpening = 
+ record {
+   createdAt: int;
+   department: text;
+   description: text;
+   id: nat;
+   isActive: bool;
+   location: text;
+   requirements: text;
+   title: text;
+ };
+type JobApplicationInput = 
+ record {
+   applicantName: text;
+   coverLetter: text;
+   email: text;
+   jobOpeningId: nat;
+   phone: text;
+   positionApplied: text;
+   resumeUrl: text;
+ };
+type JobApplication = 
+ record {
+   applicantName: text;
+   coverLetter: text;
+   email: text;
+   id: nat;
+   jobOpeningId: nat;
+   phone: text;
+   positionApplied: text;
+   resumeUrl: text;
+   submittedAt: int;
+ };
+type ImmigrationVisa = 
+ record {
+   description: text;
+   documentsRequired: vec text;
+   eligibilityCriteria: vec text;
+   id: text;
+   imageUrl: text;
+   processingTime: text;
+   requirements: vec text;
+   successRate: text;
+   title: text;
+   visaType: text;
+ };
+type ImmigrationConsultation = 
+ record {
+   country: text;
+   email: text;
+   id: RecordId;
+   name: text;
+   phone: text;
+   preferredTime: text;
+   timestamp: Timestamp;
+   visaType: text;
+ };
+type HomeSocialLink = 
+ record {
+   platform: text;
+   url: text;
+ };
+type HomeSectionsContent = 
+ record {
+   ctaBannerButtonText: text;
+   ctaBannerHeadline: text;
+   ctaBannerSubheadline: text;
+   eventsDisplayCount: nat;
+   footerDescription: text;
+   footerSocialLinks: vec HomeSocialLink;
+   testimonialsDisplayCount: nat;
+   universityMarqueeEnabled: bool;
+   whyChooseUsHeadline: text;
+   whyChooseUsPoints: vec HomeSectionPoint;
+ };
+type HomeSectionPoint = 
+ record {
+   description: text;
+   icon: text;
+   title: text;
+ };
+type HeroContent = 
+ record {
+   headline: text;
+   studentsGuided: text;
+   subheadline: text;
+   universityPartnerships: text;
+   visaSuccessRate: text;
+   yearsExperience: text;
+ };
+type GoogleReviewsBadge = 
+ record {
+   isVisible: bool;
+   rating: text;
+   reviewCount: text;
+   reviewUrl: text;
+ };
+type GalleryEntryInput = 
+ record {
+   destinationCountry: text;
+   imageUrl: text;
+   isVisible: bool;
+   order: nat;
+   studentName: text;
+   universityAdmitted: text;
+   visaStatus: text;
+ };
+type GalleryEntry = 
+ record {
+   createdAt: int;
+   destinationCountry: text;
+   id: nat;
+   imageUrl: text;
+   isVisible: bool;
+   order: nat;
+   studentName: text;
+   universityAdmitted: text;
+   visaStatus: text;
+ };
+type FreeCounselingContent = 
+ record {
+   benefitPoints: vec FreeCounselingBenefitPoint;
+   ctaText: text;
+   formDescription: text;
+   heroHeadline: text;
+   heroImageUrl: text;
+   heroSubheadline: text;
+ };
+type FreeCounselingBenefitPoint = 
+ record {
+   description: text;
+   title: text;
+ };
+type FooterSocialLink = 
+ record {
+   platform: text;
+   url: text;
+ };
+type FooterLink = 
+ record {
+   linkLabel: text;
+   url: text;
+ };
+type FooterContent = 
+ record {
+   copyrightText: text;
+   countryLinks: vec FooterLink;
+   eduLoanPartners: vec EduLoanPartner;
+   facebookReviewsBadge: FacebookReviewsBadge;
+   googleReviewsBadge: GoogleReviewsBadge;
+   officeLocations: vec OfficeLocation;
+   quickLinks: vec FooterLink;
+   serviceLinks: vec FooterLink;
+   socialLinks: vec FooterSocialLink;
+   whatsappNumber: text;
+ };
+type FacebookReviewsBadge = 
+ record {
+   isVisible: bool;
+   rating: text;
+   reviewCount: text;
+   reviewUrl: text;
+ };
+type FAQ = 
+ record {
+   answer: text;
+   id: RecordId;
+   order: nat;
+   question: text;
+ };
+type EventItemInput = 
+ record {
+   date: text;
+   description: text;
+   imageUrl: text;
+   isActive: bool;
+   location: text;
+   registrationLink: text;
+   title: text;
+ };
+type EventItem = 
+ record {
+   date: text;
+   description: text;
+   id: RecordId;
+   imageUrl: text;
+   isActive: bool;
+   location: text;
+   registrationLink: text;
+   title: text;
+ };
+type EduLoanPartner = 
+ record {
+   id: text;
+   logoUrl: text;
+   name: text;
+   websiteUrl: text;
+ };
+type DemoClassBooking = 
+ record {
+   email: text;
+   id: RecordId;
+   name: text;
+   phone: text;
+   preferredTime: text;
+   testType: text;
+   timestamp: Timestamp;
+ };
+type CountryUniversity = 
+ record {
+   id: RecordId;
+   logoUrl: text;
+   name: text;
+   ranking: text;
+   tuition: text;
+   website: text;
+ };
+type CountryTopUniversity = 
+ record {
+   name: text;
+   ranking: text;
+ };
+type CountryInfo = 
+ record {
+   acceptanceRate: text;
+   averageCost: text;
+   description: text;
+   faqs: vec CountryFAQ;
+   flagImage: text;
+   heroImage: text;
+   intakeMonths: text;
+   order: nat;
+   popularCourses: vec text;
+   prPathway: text;
+   processingTime: text;
+   requirements: vec text;
+   scholarships: vec text;
+   slug: text;
+   topUniversities: vec CountryTopUniversity;
+   tuition: text;
+   visaSteps: vec text;
+   visaSuccessRate: text;
+   workOpportunities: text;
+ };
+type CountryFAQ = 
+ record {
+   answer: text;
+   question: text;
+ };
+type CountryDetailContent = 
+ record {
+   costOfLiving: CostBreakdown;
+   countrySlug: text;
+   faqs: vec FAQ;
+   heroImageUrl: text;
+   heroSubtitle: text;
+   heroTitle: text;
+   popularCourses: vec text;
+   prOpportunities: text;
+   scholarships: vec text;
+   universities: vec CountryUniversity;
+   visaProcess: vec VisaStep;
+   whyStudyHere: text;
+   workRights: text;
+ };
+type CounselingBooking = 
+ record {
+   countryInterests: vec text;
+   educationLevel: text;
+   email: text;
+   id: RecordId;
+   name: text;
+   phone: text;
+   preferredTime: text;
+   timestamp: Timestamp;
+ };
+type CostBreakdown = 
+ record {
+   accommodation: text;
+   food: text;
+   miscellaneous: text;
+   totalMonthly: text;
+   transport: text;
+ };
+type ContactSubmission = 
+ record {
+   email: text;
+   id: RecordId;
+   inquiryType: text;
+   message: text;
+   name: text;
+   phone: text;
+   timestamp: Timestamp;
+ };
+type ContactInfo = 
+ record {
+   address1: text;
+   address2: text;
+   address3: text;
+   branch1Name: text;
+   branch2Name: text;
+   branch3Name: text;
+   email: text;
+   phone1: text;
+   phone2: text;
+   phone3: text;
+ };
+type BlogPostInput = 
+ record {
+   category: text;
+   content: text;
+   featuredImageUrl: text;
+   isPublished: bool;
+   slug: text;
+   title: text;
+ };
+type BlogPost = 
+ record {
+   category: text;
+   content: text;
+   createdAt: Timestamp;
+   featuredImageUrl: text;
+   id: RecordId;
+   isPublished: bool;
+   publishedAt: nat;
+   slug: text;
+   tags: vec text;
+   title: text;
+   updatedAt: Timestamp;
+ };
+type BeOurPartnerInquiryInput = 
+ record {
+   companyName: text;
+   contactName: text;
+   email: text;
+   message: text;
+   partnershipType: text;
+   phone: text;
+ };
+type BeOurPartnerInquiry = 
+ record {
+   companyName: text;
+   contactName: text;
+   email: text;
+   id: nat;
+   message: text;
+   partnershipType: text;
+   phone: text;
+   submittedAt: int;
+ };
+type BeOurPartnerContent = 
+ record {
+   formDescription: text;
+   generalBenefits: vec text;
+   heroHeadline: text;
+   heroImage: text;
+   heroSubheadline: text;
+   partnershipTypes: vec PartnershipTypeItem;
+ };
+type BatchTiming = 
+ record {
+   capacity: nat;
+   endDate: text;
+   enrolled: nat;
+   id: RecordId;
+   schedule: text;
+   startDate: text;
+ };
+type AdminDashboardStats = 
+ record {
+   pending: nat;
+   thisMonth: nat;
+   totalLeads: nat;
+ };
+type Achievement = 
+ record {
+   description: text;
+   icon: text;
+   id: RecordId;
+   metric: text;
+ };
+type AboutPageContent = 
+ record {
+   achievements: vec Achievement;
+   companyStory: text;
+   imageUrl: text;
+   mission: text;
+   timeline: vec TimelineEntry;
+   vision: text;
+ };
+service : {
+  addBatchTiming: (token: SessionToken, examId: text, batch:
+   record {
+     capacity: nat;
+     endDate: text;
+     enrolled: nat;
+     schedule: text;
+     startDate: text;
+   }) -> (variant {
+            err: text;
+            ok: RecordId;
+          });
+  addBlogPost: (token: SessionToken, input: BlogPostInput) ->
+   (variant {
+      err: text;
+      ok: RecordId;
+    });
+  addCountry: (token: text, slug: text, name: text) ->
+   (variant {
+      err: text;
+      ok;
+    });
+  addEvent: (token: text, item: EventItemInput) ->
+   (variant {
+      err: text;
+      ok: RecordId;
+    });
+  addGalleryEntry: (token: SessionToken, input: GalleryEntryInput) ->
+   (variant {
+      err: text;
+      ok: nat;
+    });
+  addJobOpening: (token: SessionToken, input: JobOpeningInput) ->
+   (variant {
+      err: text;
+      ok: nat;
+    });
+  addPartnerUniversity: (token: SessionToken, uni: PartnerUniversity) ->
+   (variant {
+      err: text;
+      ok: RecordId;
+    });
+  addService: (token: text, "service": ServiceItemInput) ->
+   (variant {
+      err: text;
+      ok: RecordId;
+    });
+  addTeamMember: (token: text, member: TeamMemberInput) ->
+   (variant {
+      err: text;
+      ok: RecordId;
+    });
+  addTestimonial: (token: text, item: TestimonialInput) ->
+   (variant {
+      err: text;
+      ok: RecordId;
+    });
+  adminLogin: (username: text, password: text) ->
+   (variant {
+      err: text;
+      ok: SessionToken;
+    });
+  adminLogout: (token: text) -> ();
+  deleteBatchTiming: (token: SessionToken, examId: text, batchId:
+   RecordId) -> (variant {
+                   err: text;
+                   ok;
+                 });
+  deleteBlogPost: (token: SessionToken, id: RecordId) ->
+   (variant {
+      err: text;
+      ok;
+    });
+  deleteCountry: (token: text, slug: text) -> (variant {
+                                                 err: text;
+                                                 ok;
+                                               });
+  deleteEvent: (token: text, id: RecordId) -> (variant {
+                                                 err: text;
+                                                 ok;
+                                               });
+  deleteGalleryEntry: (token: SessionToken, id: nat) ->
+   (variant {
+      err: text;
+      ok;
+    });
+  deleteJobApplication: (token: SessionToken, id: nat) ->
+   (variant {
+      err: text;
+      ok;
+    });
+  deleteJobOpening: (token: SessionToken, id: nat) ->
+   (variant {
+      err: text;
+      ok;
+    });
+  deletePartnerUniversity: (token: SessionToken, id: RecordId) ->
+   (variant {
+      err: text;
+      ok;
+    });
+  deleteService: (token: text, id: RecordId) -> (variant {
+                                                   err: text;
+                                                   ok;
+                                                 });
+  deleteTeamMember: (token: text, id: RecordId) -> (variant {
+                                                      err: text;
+                                                      ok;
+                                                    });
+  deleteTestimonial: (token: text, id: RecordId) -> (variant {
+                                                       err: text;
+                                                       ok;
+                                                     });
+  getAboutPageContent: () -> (AboutPageContent) query;
+  getActiveJobOpenings: () -> (vec JobOpening) query;
+  getAdminDashboardStats: () -> (AdminDashboardStats) query;
+  getAllCountries: () -> (vec CountryInfo) query;
+  getAllPageContents: () -> (vec PageContent) query;
+  getBeOurPartnerContent: () -> (opt BeOurPartnerContent) query;
+  getBlogPostById: (id: RecordId) -> (opt BlogPost) query;
+  getBlogPosts: () -> (vec BlogPost) query;
+  getContactInfo: () -> (ContactInfo) query;
+  getContactSubmissions: () -> (vec ContactSubmission) query;
+  getCounselingBookings: () -> (vec CounselingBooking) query;
+  getCountryDetail: (slug: text) -> (opt CountryDetailContent) query;
+  getCountryDetailAll: () -> (vec CountryDetailContent) query;
+  getCountryDetailBySlug: (slug: text) -> (opt CountryDetailContent) query;
+  getCountryInfo: (slug: text) -> (opt CountryInfo) query;
+  getCountryInfoAll: () -> (vec CountryInfo) query;
+  getDemoClassBookings: () -> (vec DemoClassBooking) query;
+  getEvents: () -> (vec EventItem) query;
+  getFooterContent: () -> (FooterContent) query;
+  getFreeCounselingContent: () -> (FreeCounselingContent) query;
+  getGalleryEntries: () -> (vec GalleryEntry) query;
+  getHeroContent: () -> (HeroContent) query;
+  getHomeSectionsContent: () -> (HomeSectionsContent) query;
+  getImmigrationConsultations: () -> (vec ImmigrationConsultation) query;
+  getImmigrationVisaById: (id: text) -> (opt ImmigrationVisa) query;
+  getImmigrationVisas: () -> (vec ImmigrationVisa) query;
+  getJobApplications: (token: SessionToken) -> (vec JobApplication) query;
+  getJobOpenings: () -> (vec JobOpening) query;
+  getLeadershipMembers: () -> (vec LeadershipMember) query;
+  getLifeAtValmikiContent: () -> (LifeAtValmikiContent) query;
+  getNewsletterSubscriptions: () -> (vec NewsletterSubscription) query;
+  getPageContent: (pageId: text) -> (opt PageContent) query;
+  getPageHeroContent: (pageId: text) -> (opt PageHeroContent) query;
+  getPartnerInquiries: (token: SessionToken) ->
+   (vec BeOurPartnerInquiry) query;
+  getPartnerUniversities: () -> (vec PartnerUniversity) query;
+  getPublishedBlogPosts: () -> (vec BlogPost) query;
+  getServiceDetail: (serviceId: text) -> (opt ServiceDetailContent) query;
+  getServices: () -> (vec ServiceItem) query;
+  getStudyAbroadContent: () -> (StudyAbroadContent) query;
+  getTeamMembers: () -> (vec TeamMember) query;
+  getTestPrepExamById: (id: text) -> (opt TestPrepExam) query;
+  getTestPrepExams: () -> (vec TestPrepExam) query;
+  getTestimonials: () -> (vec TestimonialItem) query;
+  getVisaEligibilityResults: () -> (vec VisaEligibilityResult) query;
+  getVisibleGalleryEntries: () -> (vec GalleryEntry) query;
+  getWebsiteTheme: () -> (WebsiteTheme) query;
+  reorderCountries: (token: text, slugOrder: vec text) ->
+   (variant {
+      err: text;
+      ok;
+    });
+  reorderPartnerUniversities: (token: SessionToken, orderedIds:
+   vec RecordId) -> (variant {
+                       err: text;
+                       ok;
+                     });
+  setBeOurPartnerContent: (token: SessionToken, content:
+   BeOurPartnerContent) -> (variant {
+                              err: text;
+                              ok;
+                            });
+  setServiceDetail: (token: SessionToken, content: ServiceDetailContent) ->
+   (variant {
+      err: text;
+      ok;
+    });
+  submitContactForm: (name: text, email: text, phone: text, inquiryType:
+   text, message: text) -> (SubmissionResult);
+  submitCounselingBooking: (name: text, email: text, phone: text,
+   countryInterests: vec text, educationLevel: text, preferredTime: text) ->
+   (SubmissionResult);
+  submitDemoClassBooking: (testType: text, preferredTime: text, name: 
+   text, email: text, phone: text) -> (SubmissionResult);
+  submitImmigrationConsultation: (visaType: text, country: text, name: 
+   text, email: text, phone: text, preferredTime: text) -> (SubmissionResult);
+  submitJobApplication: (input: JobApplicationInput) -> (JobApplication);
+  submitPartnerInquiry: (input: BeOurPartnerInquiryInput) ->
+   (SubmissionResult);
+  submitVisaEligibility: (visaType: text, country: text, age: nat, education:
+   text, workExperienceYears: nat, testScores: text, resultPercentage:
+   nat) -> (SubmissionResult);
+  subscribeNewsletter: (email: text) -> (SubmissionResult);
+  toggleBlogPostPublish: (token: SessionToken, id: RecordId) ->
+   (variant {
+      err: text;
+      ok;
+    });
+  toggleGalleryEntryVisibility: (token: SessionToken, id: nat) ->
+   (variant {
+      err: text;
+      ok;
+    });
+  updateAboutPageContent: (token: SessionToken, content: AboutPageContent) ->
+   (variant {
+      err: text;
+      ok;
+    });
+  updateBatchTiming: (token: SessionToken, examId: text, batchId: RecordId,
+   batch:
+   record {
+     capacity: nat;
+     endDate: text;
+     enrolled: nat;
+     schedule: text;
+     startDate: text;
+   }) -> (variant {
+            err: text;
+            ok;
+          });
+  updateBlogPost: (token: SessionToken, id: RecordId, input:
+   BlogPostInput) -> (variant {
+                        err: text;
+                        ok;
+                      });
+  updateContactInfo: (token: text, info: ContactInfo) ->
+   (variant {
+      err: text;
+      ok;
+    });
+  updateCountryDetailBySlug: (token: SessionToken, content:
+   CountryDetailContent) -> (variant {
+                               err: text;
+                               ok;
+                             });
+  updateCountryInfo: (token: text, info: CountryInfo) ->
+   (variant {
+      err: text;
+      ok;
+    });
+  updateEvent: (token: text, id: RecordId, item: EventItemInput) ->
+   (variant {
+      err: text;
+      ok;
+    });
+  updateFooterContent: (token: text, content: FooterContent) ->
+   (variant {
+      err: text;
+      ok;
+    });
+  updateFreeCounselingContent: (token: text, content:
+   FreeCounselingContent) -> (variant {
+                                err: text;
+                                ok;
+                              });
+  updateGalleryEntry: (token: SessionToken, id: nat, input:
+   GalleryEntryInput) -> (variant {
+                            err: text;
+                            ok;
+                          });
+  updateHeroContent: (token: text, content: HeroContent) ->
+   (variant {
+      err: text;
+      ok;
+    });
+  updateHomeSectionsContent: (token: text, content: HomeSectionsContent) ->
+   (variant {
+      err: text;
+      ok;
+    });
+  updateImmigrationVisa: (token: SessionToken, visa: ImmigrationVisa) ->
+   (variant {
+      err: text;
+      ok;
+    });
+  updateJobOpening: (token: SessionToken, id: nat, input: JobOpeningInput) ->
+   (variant {
+      err: text;
+      ok;
+    });
+  updateLeadershipMembers: (token: SessionToken, members:
+   vec LeadershipMember) -> (variant {
+                               err: text;
+                               ok;
+                             });
+  updateLifeAtValmikiContent: (token: text, content: LifeAtValmikiContent) ->
+   (variant {
+      err: text;
+      ok;
+    });
+  updatePageContent: (token: SessionToken, pageId: text, content:
+   PageContent) -> (variant {
+                      err: text;
+                      ok;
+                    });
+  updatePageHeroContent: (token: text, content: PageHeroContent) ->
+   (variant {
+      err: text;
+      ok;
+    });
+  updatePartnerUniversity: (token: SessionToken, id: RecordId, uni:
+   PartnerUniversity) -> (variant {
+                            err: text;
+                            ok;
+                          });
+  updateService: (token: text, id: RecordId, "service": ServiceItemInput) ->
+   (variant {
+      err: text;
+      ok;
+    });
+  updateStudyAbroadContent: (token: SessionToken, content:
+   StudyAbroadContent) -> (variant {
+                             err: text;
+                             ok;
+                           });
+  updateTeamMember: (token: text, id: RecordId, member: TeamMemberInput) ->
+   (variant {
+      err: text;
+      ok;
+    });
+  updateTestPrepExam: (token: SessionToken, exam: TestPrepExam) ->
+   (variant {
+      err: text;
+      ok;
+    });
+  updateTestimonial: (token: text, id: RecordId, item: TestimonialInput) ->
+   (variant {
+      err: text;
+      ok;
+    });
+  updateWebsiteTheme: (token: text, theme: WebsiteTheme) ->
+   (variant {
+      err: text;
+      ok;
+    });
+  verifyAdminToken: (token: text) -> (bool) query;
+}
